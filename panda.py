@@ -7,7 +7,7 @@ from pyPdf import PdfFileWriter, PdfFileReader
 
 
 def chunk_pdf(pdf_path):
-    inputpdf = PdfFileReader(open("assets/document.pdf", "rb"))
+    inputpdf = PdfFileReader(open(pdf_path, "rb"))
 
     for i in xrange(inputpdf.numPages):
         output = PdfFileWriter()
