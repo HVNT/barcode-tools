@@ -39,11 +39,11 @@ def rename_target_files(dir_path, target_files, sheet_path, id_col, row_offset):
 
 
 def main():
-    rename_dir_path = sys.argv[1]
-    rename_prefix = sys.argv[2]
-    sheet_path = sys.argv[3]
-    id_col = col2num(sys.argv[4])
-    row_offset = int(sys.argv[5])
+    rename_dir_path = sys.argv[1]   # relative path to directory that contains target files
+    rename_prefix = sys.argv[2]     # substring of files we are trying to rename
+    sheet_path = sys.argv[3]        # relative path to excel sheet that contains product ids we are renaming to
+    id_col = col2num(sys.argv[4])   # column that contains the product ids
+    row_offset = int(sys.argv[5])   # row to begin renaming at
 
     target_files = get_target_files(rename_dir_path, rename_prefix)
     rename_target_files(rename_dir_path, target_files, sheet_path, id_col, row_offset)
