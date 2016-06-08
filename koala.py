@@ -26,8 +26,8 @@ def extract_images(sheet_path, img_col, id_col, row_offset):
     for row_index in range(row_offset, sheet.nrows):
         img = sheet.cell(row_index, img_col).value
         id = sheet.cell(row_index, id_col).value
-        print img
-        print id
+        print "img", img
+        print "item id", id
 
 
 def main():
